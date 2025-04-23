@@ -6,6 +6,11 @@ use Illuminate\Http\Request;
 
 class TraductorController extends Controller
 {
+    // public function index()
+    // {
+    //     return view('traductor');
+    // }
+
     public function traducir(Request $request)
     {
         $texto = $request->input('texto');
