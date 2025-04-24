@@ -42,7 +42,7 @@ class TraductorController extends Controller
         try {
             // Desactivar verificación SSL
             $client = new Client([
-                'verify' => false // Solo para desarrollo
+                'verify' => false // Solo para desarrollo, se mantiene desactivada la verificación SSL para evitar problemas de conexión
             ]);
 
             $response = $client->post($url . '/api/gemma', [
@@ -53,7 +53,7 @@ class TraductorController extends Controller
 
             return response()->json([
                 'prompt' => $data['prompt'] ?? '',
-                'traduccion' => $data['respuesta'] ?? 'Sin respuesta'
+                'traduccion' => $data['respuesta'] ?? 'Sin respuesta' // Note: hay que verificar si la respuesta es correcta y con el formato esperado
             ]);
         } catch (\Exception $e) {
             return response()->json([
