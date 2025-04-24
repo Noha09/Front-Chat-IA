@@ -17,3 +17,4 @@ Route::view('/', 'traductor')->name('traductor');
 Route::view('/traductor', 'traductor');
 
 Route::post('/traducir', [TraductorController::class, 'traducir'])->name('traducir');
+Route::get('/test', [TraductorController::class, 'testConection'])->name('testConection');

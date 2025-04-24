@@ -63,6 +63,7 @@
                 <button id="clear-all-btn" class="bg-red-500 hover:bg-red-600 text-white py-2 px-6 rounded transition-colors">
                     Limpiar todo
                 </button>
+                <a href="{{ route('testConection') }}">Test</a>
             </div>
         </div>
     </div>
